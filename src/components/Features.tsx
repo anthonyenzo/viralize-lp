@@ -24,7 +24,7 @@ export function Features() {
                             Crie posts no formato mais consumido do momento. Adicione sua foto, @usuário, selo de verificado e gere frases de efeito prontas para o feed ou stories usando nossa IA treinada para viralizar.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Formatos otimizados para Instagram e TikTok", "Geração de frases por IA", "Marca d'água personalizável"].map((item, i) => (
+                            {["Formatos otimizados para Instagram e TikTok", "Geração de frases por IA", "Marca d&apos;água personalizável"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>
@@ -67,7 +67,7 @@ export function Features() {
                                     </div>
                                 </div>
                                 <p className="text-xl text-white font-medium text-left leading-relaxed mb-4">
-                                    "O segredo do conteúdo viral não é a edição perfeita, é a retenção nos primeiros 3 segundos."
+                                    &quot;O segredo do conteúdo viral não é a edição perfeita, é a retenção nos primeiros 3 segundos.&quot;
                                 </p>
                                 <div className="text-left text-primary text-sm font-medium">10:42 PM · 15 Mar 2026</div>
                             </div>
@@ -146,10 +146,10 @@ export function Features() {
                             Baixe e reaproveite qualquer conteúdo.
                         </h2>
                         <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
-                            Converta e baixe vídeos do YouTube (MP4/MP3), Reels do Instagram e vídeos do TikTok em alta qualidade e sem marca d'água. Ideal para curadoria de conteúdo e canais dark.
+                            Converta e baixe vídeos do YouTube (MP4/MP3), Reels do Instagram e vídeos do TikTok em alta qualidade e sem marca d&apos;água. Ideal para curadoria de conteúdo e canais dark.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Downloads em 1080p e 4K", "Extração de MP3 em 320kbps", "Sem marca d'água do TikTok"].map((item, i) => (
+                            {["Downloads em 1080p e 4K", "Extração de MP3 em 320kbps", "Sem marca d&apos;água do TikTok"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-purple-400 w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>

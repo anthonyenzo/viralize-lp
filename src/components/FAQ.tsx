@@ -18,7 +18,7 @@ const faqs = [
     },
     {
         question: "Os vídeos baixados nos conversores vêm com marca d'água?",
-        answer: "Não. Todos os downloads através dos nossos conversores premium (seja do TikTok, Instagram ou YouTube) são 100% limpos e SEM marca d'água, prontos para você reaproveitar e repostar."
+        answer: "Não. Todos os downloads através dos nossos conversores premium (seja do TikTok, Instagram ou YouTube) são 100% limpos e SEM marca d&apos;água, prontos para você reaproveitar e repostar."
     }
 ];
 

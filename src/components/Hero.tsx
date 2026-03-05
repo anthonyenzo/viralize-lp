@@ -28,7 +28,7 @@ export function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Aumente sua audiência no Instagram, TikTok e YouTube. Crie posts visuais, gere Reels automatizados e baixe vídeos sem marca d'água em uma única plataforma.
+                        Aumente sua audiência no Instagram, TikTok e YouTube. Crie posts visuais, gere Reels automatizados e baixe vídeos sem marca d&apos;água em uma única plataforma.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

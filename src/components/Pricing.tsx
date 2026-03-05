@@ -25,7 +25,7 @@ const plans = [
             "Acesso ao Criador de Reels",
             "Legendas geradas com IA",
             "Conversores Ilimitados (YT, IG, TTK)",
-            "Downloads sem marca d'água",
+            "Downloads sem marca d&apos;água",
             "Resolução 4K"
         ],
         buttonText: "Assinar Premium",

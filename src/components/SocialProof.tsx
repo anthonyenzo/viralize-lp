@@ -31,7 +31,7 @@ export function SocialProof() {
                                     <p className="text-xs text-primary">{t.role}</p>
                                 </div>
                             </div>
-                            <p className="text-sm text-zinc-400 italic leading-relaxed">"{t.text}"</p>
+                            <p className="text-sm text-zinc-400 italic leading-relaxed">&quot;{t.text}&quot;</p>
                         </div>
                     ))}
                 </div>
