@@ -1,0 +1,44 @@
+# Deploy trigger: 2026-03-05
+name: Deploy Hostinger FTP
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Pegando o código (Checkout)
+      uses: actions/checkout@v4
+
+    - name: ⚙️ Preparando o Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: 📦 Instalando Dependências
+      run: npm install
+
+    - name: 🏗️ Compilando o Projeto (Build)
+      run: |
+        npm run build
+        echo "{\"version\": \"$(date +%s)\"}" > out/version.json
+
+    - name: 🚀 Enviando para a Hostinger
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./out/
+        server-dir: /
+        timeout: 600000
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
