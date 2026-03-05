@@ -1,0 +1,116 @@
+import Link from "next/link";
+import { CheckCircle2 } from "lucide-react";
+
+const plans = [
+    {
+        name: "Free",
+        price: "R$ 0",
+        period: "/mês",
+        description: "Para iniciantes dando os primeiros passos.",
+        features: [
+            "Acesso a posts de texto",
+            "Frases de efeito geradas por IA",
+            "10 downloads por mês",
+        ],
+        buttonText: "Começar de graça",
+        buttonPrimary: false,
+        popular: false,
+    },
+    {
+        name: "Premium",
+        price: "R$ 49",
+        period: "/mês",
+        description: "O essencial para crescer sua marca.",
+        features: [
+            "Acesso ao Criador de Reels",
+            "Legendas geradas com IA",
+            "Conversores Ilimitados (YT, IG, TTK)",
+            "Downloads sem marca d'água",
+            "Resolução 4K"
+        ],
+        buttonText: "Assinar Premium",
+        buttonPrimary: true,
+        popular: true,
+    },
+    {
+        name: "Anual",
+        price: "R$ 39",
+        period: "/mês",
+        description: "Desconto agressivo para comprometidos.",
+        features: [
+            "Todos os benefícios Premium",
+            "Suporte prioritário",
+            "Acesso antecipado a novas IAs",
+            "Economize R$ 120 no ano"
+        ],
+        buttonText: "Assinar Anual",
+        buttonPrimary: false,
+        popular: false,
+        tag: "Maior Desconto"
+    }
+];
+
+export function Pricing() {
+    return (
+        <section id="pricing" className="py-24 bg-background relative overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+                        Comece gratuitamente e evolua com sua <span className="text-primary">audiência.</span>
+                    </h2>
+                    <p className="text-lg text-zinc-400">
+                        Cancele quando quiser. Sem taxas ocultas.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                    {plans.map((plan, i) => (
+                        <div
+                            key={i}
+                            className={`relative rounded-3xl p-8 bg-surface border transition-all duration-300 ${plan.popular
+                                ? "border-primary shadow-[0_0_30px_var(--color-primary-glow)] md:-translate-y-4 md:scale-105 z-10"
+                                : "border-surface-border hover:border-primary/30"
+                                }`}
+                        >
+                            {plan.tag && (
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-primary text-background text-sm font-bold rounded-full shadow-lg">
+                                    {plan.tag}
+                                </div>
+                            )}
+
+                            <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                            <p className="text-zinc-400 text-sm mb-6 h-10">{plan.description}</p>
+
+                            <div className="mb-6">
+                                <span className="text-4xl font-display font-bold text-white">{plan.price}</span>
+                                <span className="text-zinc-500">{plan.period}</span>
+                            </div>
+
+                            <Link
+                                href="/signup"
+                                className={`w-full py-3 px-6 rounded-full font-bold flex justify-center items-center transition-all mb-8 ${plan.buttonPrimary
+                                    ? "bg-primary text-background hover:bg-cyan-400 hover:shadow-[0_0_20px_var(--color-primary-glow)]"
+                                    : "bg-surface-hover border border-surface-border text-white hover:bg-zinc-800"
+                                    }`}
+                            >
+                                {plan.buttonText}
+                            </Link>
+
+                            <ul className="space-y-4">
+                                {plan.features.map((feature, idx) => (
+                                    <li key={idx} className="flex items-start gap-3 text-sm text-zinc-300">
+                                        <CheckCircle2 className={`w-5 h-5 flex-shrink-0 ${plan.popular ? "text-primary" : "text-zinc-600"}`} />
+                                        <span>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
