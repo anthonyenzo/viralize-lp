@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const plans = [
     {
@@ -50,6 +53,27 @@ const plans = [
     }
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
+};
+
 export function Pricing() {
     return (
         <section id="pricing" className="py-24 bg-background relative overflow-hidden">
@@ -57,26 +81,39 @@ export function Pricing() {
             <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center max-w-3xl mx-auto mb-16"
+                >
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
                         Comece gratuitamente e evolua com sua <span className="text-primary">audiência.</span>
                     </h2>
                     <p className="text-lg text-zinc-400">
                         Cancele quando quiser. Sem taxas ocultas.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 max-w-6xl mx-auto items-center"
+                >
                     {plans.map((plan, i) => (
-                        <div
+                        <motion.div
                             key={i}
-                            className={`relative rounded-3xl p-8 bg-surface border transition-all duration-300 ${plan.popular
+                            variants={itemVariants}
+                            className={`relative rounded-3xl p-6 sm:p-8 bg-surface border transition-all duration-300 ${plan.popular
                                 ? "border-primary shadow-[0_0_30px_var(--color-primary-glow)] md:-translate-y-4 md:scale-105 z-10"
                                 : "border-surface-border hover:border-primary/30"
                                 }`}
                         >
                             {plan.tag && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-primary text-background text-sm font-bold rounded-full shadow-lg">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-primary text-background text-sm font-bold rounded-full shadow-lg whitespace-nowrap">
                                     {plan.tag}
                                 </div>
                             )}
@@ -107,9 +144,9 @@ export function Pricing() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

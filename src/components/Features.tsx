@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Download, Play, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Features() {
     return (
@@ -11,8 +14,14 @@ export function Features() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Feature 1 */}
-                <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
-                    <div className="flex-1 text-left">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-24 lg:mb-32">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 text-left"
+                    >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
                             <Quote size={16} />
                             <span className="text-sm font-medium">Post Twitter & Frases</span>
@@ -38,11 +47,17 @@ export function Features() {
                             Testar agora
                             <ArrowRight size={18} />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex-1 w-full relative">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 w-full relative"
+                    >
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
-                        <div className="relative bg-background border border-surface-border rounded-3xl p-6 shadow-2xl overflow-hidden group">
+                        <div className="relative bg-background border border-surface-border rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden group">
                             {/* Mockup UI */}
                             <div className="flex items-center justify-between border-b border-surface-border pb-4 mb-4">
                                 <div className="flex space-x-2">
@@ -66,18 +81,24 @@ export function Features() {
                                         <span className="text-xs text-zinc-500">@seuusario</span>
                                     </div>
                                 </div>
-                                <p className="text-xl text-white font-medium text-left leading-relaxed mb-4">
+                                <p className="text-lg sm:text-xl text-white font-medium text-left leading-relaxed mb-4">
                                     &quot;O segredo do conteúdo viral não é a edição perfeita, é a retenção nos primeiros 3 segundos.&quot;
                                 </p>
                                 <div className="text-left text-primary text-sm font-medium">10:42 PM · 15 Mar 2026</div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Feature 2 */}
-                <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-32">
-                    <div className="flex-1 text-left">
+                <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 mb-24 lg:mb-32">
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 text-left"
+                    >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 mb-6">
                             <Play size={16} />
                             <span className="text-sm font-medium">Criador de Reels & Legendas</span>
@@ -103,24 +124,30 @@ export function Features() {
                             Criar Reel agora
                             <ArrowRight size={18} />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex-1 w-full relative">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 w-full relative"
+                    >
                         <div className="absolute inset-0 bg-gradient-to-tl from-teal-500/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
-                        <div className="relative bg-background border border-surface-border rounded-3xl p-6 shadow-2xl overflow-hidden group">
+                        <div className="relative bg-background border border-surface-border rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden group">
                             {/* Mockup UI - Video Editor */}
                             <div className="flex items-center justify-between border-b border-surface-border pb-4 mb-4">
                                 <span className="text-sm text-zinc-400 font-medium">Reel Editor AI</span>
                                 <span className="px-2 py-1 bg-teal-500/20 text-teal-400 text-xs rounded-md">Processing 98%</span>
                             </div>
-                            <div className="aspect-[9/16] max-w-[240px] mx-auto bg-surface border border-surface-border rounded-2xl relative overflow-hidden flex flex-col justify-end p-4">
+                            <div className="aspect-[9/16] max-w-[200px] sm:max-w-[240px] mx-auto bg-surface border border-surface-border rounded-2xl relative overflow-hidden flex flex-col justify-end p-4">
                                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop')] bg-cover opacity-20" />
                                 <div className="relative text-center w-full z-10 mb-8">
-                                    <span className="bg-yellow-400 text-black font-bold text-2xl px-2 py-1 uppercase transform -skew-x-6 inline-block shadow-lg">
+                                    <span className="bg-yellow-400 text-black font-bold text-lg sm:text-2xl px-2 py-1 uppercase transform -skew-x-6 inline-block shadow-lg">
                                         INTELIGÊNCIA
                                     </span>
                                     <br />
-                                    <span className="bg-white text-black font-black text-3xl px-2 py-0.5 mt-1 uppercase transform -skew-x-6 inline-block shadow-lg">
+                                    <span className="bg-white text-black font-black text-2xl sm:text-3xl px-2 py-0.5 mt-1 uppercase transform -skew-x-6 inline-block shadow-lg">
                                         ARTIFICIAL
                                     </span>
                                 </div>
@@ -132,12 +159,18 @@ export function Features() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Feature 3 */}
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    <div className="flex-1 text-left">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 text-left"
+                    >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-6">
                             <Download size={16} />
                             <span className="text-sm font-medium">Conversores Premium</span>
@@ -156,15 +189,21 @@ export function Features() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex-1 w-full relative">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex-1 w-full relative"
+                    >
                         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
-                        <div className="relative bg-background border border-surface-border rounded-3xl p-6 shadow-2xl overflow-hidden group">
+                        <div className="relative bg-background border border-surface-border rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden group">
                             {/* Mockup UI - Downloader */}
-                            <div className="bg-surface rounded-xl p-6 border border-surface-border">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="flex-1 h-12 bg-background border border-surface-border rounded-lg flex items-center px-4">
+                            <div className="bg-surface rounded-xl p-4 sm:p-6 border border-surface-border">
+                                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
+                                    <div className="flex-1 h-12 bg-background border border-surface-border rounded-lg flex items-center px-4 overflow-hidden">
                                         <span className="text-zinc-500 truncate text-sm">https://www.tiktok.com/@creator/video/1234...</span>
                                     </div>
                                     <button className="h-12 px-6 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors">
@@ -172,14 +211,14 @@ export function Features() {
                                     </button>
                                 </div>
 
-                                <div className="p-4 border border-surface-border bg-background rounded-lg flex items-center gap-4">
-                                    <div className="w-16 h-24 bg-zinc-800 rounded flex items-center justify-center">
+                                <div className="p-4 border border-surface-border bg-background rounded-lg flex flex-col sm:flex-row items-center gap-4">
+                                    <div className="w-full sm:w-16 h-40 sm:h-24 bg-zinc-800 rounded flex items-center justify-center">
                                         <Play className="text-zinc-600 w-8 h-8" />
                                     </div>
-                                    <div className="flex-1">
-                                        <div className="h-4 w-3/4 bg-zinc-800 rounded mb-2" />
-                                        <div className="h-3 w-1/2 bg-zinc-800 rounded mb-4" />
-                                        <div className="flex gap-2">
+                                    <div className="flex-1 text-center sm:text-left">
+                                        <div className="h-4 w-3/4 bg-zinc-800 rounded mb-2 mx-auto sm:mx-0" />
+                                        <div className="h-3 w-1/2 bg-zinc-800 rounded mb-4 mx-auto sm:mx-0" />
+                                        <div className="flex flex-wrap justify-center sm:justify-start gap-2">
                                             <button className="px-3 py-1.5 text-xs font-semibold bg-primary/10 text-primary border border-primary/20 rounded hover:bg-primary/20 transition-colors flex items-center gap-1">
                                                 <Download size={12} /> MP4 1080p
                                             </button>
@@ -191,7 +230,7 @@ export function Features() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>

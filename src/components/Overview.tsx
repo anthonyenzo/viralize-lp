@@ -1,4 +1,7 @@
+"use client";
+
 import { Sparkles, Video, Type, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 const benefits = [
     {
@@ -27,6 +30,27 @@ const benefits = [
     }
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
+};
+
 export function Overview() {
     return (
         <section id="features" className="py-24 relative overflow-hidden bg-background">
@@ -34,19 +58,32 @@ export function Overview() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center max-w-3xl mx-auto mb-16"
+                >
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
                         O que você consegue com o <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">Viralize AI</span>
                     </h2>
                     <p className="text-lg text-zinc-400">
                         Todas as ferramentas necessárias para dominar o jogo da atenção e escalar sua marca pessoal sem precisar de horas de edição.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+                >
                     {benefits.map((benefit, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={itemVariants}
                             className="group relative p-8 rounded-2xl bg-surface border border-surface-border hover:border-primary/30 transition-all duration-300 overflow-hidden"
                         >
                             {/* Card Hover Glow effect */}
@@ -65,9 +102,9 @@ export function Overview() {
                                     {benefit.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
