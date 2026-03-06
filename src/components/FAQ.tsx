@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 const faqs = [
     {
@@ -22,28 +23,62 @@ const faqs = [
     }
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
+};
+
 export function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
         <section id="faq" className="py-24 bg-surface border-t border-surface-border">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
                         Perguntas <span className="text-primary">Frequentes</span>
                     </h2>
                     <p className="text-lg text-zinc-400">
                         Tire suas dúvidas e comece a criar conteúdo viral agora mesmo.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="space-y-4">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="space-y-4"
+                >
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
 
                         return (
-                            <div
+                            <motion.div
                                 key={index}
+                                variants={itemVariants}
                                 className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? "border-primary/50 bg-background shadow-[0_0_15px_var(--color-primary-glow)]" : "border-surface-border bg-background hover:border-zinc-700"
                                     }`}
                             >
@@ -68,10 +103,10 @@ export function FAQ() {
                                         {faq.answer}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

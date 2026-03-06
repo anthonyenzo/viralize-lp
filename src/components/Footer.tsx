@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Twitter, Youtube, Zap } from "lucide-react";
+import { Instagram, Rocket, Twitter, Youtube } from "lucide-react";
 
 export function Footer() {
     return (
@@ -9,7 +9,7 @@ export function Footer() {
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 mb-6">
                             <div className="p-1.5 bg-primary rounded-lg">
-                                <Zap className="text-black fill-current w-5 h-5" />
+                                <Rocket className="text-black fill-current w-5 h-5" />
                             </div>
                             <span className="text-xl font-display font-bold text-white">Viralize AI</span>
                         </Link>

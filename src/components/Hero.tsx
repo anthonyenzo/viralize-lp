@@ -1,9 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, MessageSquareQuote, PlaySquare, Subtitles } from "lucide-react";
+import { motion } from "framer-motion";
+import { ParticleBackground } from "./ParticleBackground";
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-black">
+            {/* Particle Background */}
+            <ParticleBackground />
+
             {/* Abstract Background Elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
             <div className="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -12,16 +19,21 @@ export function Hero() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center max-w-4xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center max-w-4xl mx-auto"
+                >
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-surface-border mb-8 animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-surface-border mb-8">
                         <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse" />
                         <span className="text-sm font-medium text-zinc-300">Nova versão da IA Disponível 2.0</span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-8 leading-[1.1] animate-fade-in-up">
+                    <h1 className="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-8 leading-[1.1]">
                         Crie conteúdo viral em <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-300 to-primary-dark relative">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-300 to-primary-dark relative inline-block">
                             segundos com IA
                             <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 blur-sm" />
                         </span>
@@ -48,38 +60,29 @@ export function Hero() {
                     </div>
 
                     {/* Mini Dashboard Metrics */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                        <div className="p-4 rounded-2xl border border-surface-border bg-black/50 backdrop-blur-xl flex items-center gap-4 hover:border-primary/30 transition-colors">
-                            <div className="p-3 bg-surface rounded-lg">
-                                <MessageSquareQuote className="text-primary w-6 h-6" />
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto"
+                    >
+                        {[
+                            { icon: MessageSquareQuote, label: "Frases Geradas", value: "12.4K", color: "primary" },
+                            { icon: PlaySquare, label: "Reels Criados", value: "8.2K", color: "cyan-400" },
+                            { icon: Subtitles, label: "Legendas com IA", value: "45.9K", color: "teal-400" }
+                        ].map((metric, i) => (
+                            <div key={i} className="p-4 rounded-2xl border border-surface-border bg-black/50 backdrop-blur-xl flex items-center gap-4 hover:border-primary/30 transition-colors">
+                                <div className="p-3 bg-surface rounded-lg">
+                                    <metric.icon className={`text-${metric.color} w-6 h-6`} />
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-sm text-zinc-500 font-medium">{metric.label}</p>
+                                    <p className="text-2xl font-bold text-white">{metric.value}<span className="text-primary">+</span></p>
+                                </div>
                             </div>
-                            <div className="text-left">
-                                <p className="text-sm text-zinc-500 font-medium">Frases Geradas</p>
-                                <p className="text-2xl font-bold text-white">12.4K<span className="text-primary">+</span></p>
-                            </div>
-                        </div>
-
-                        <div className="p-4 rounded-2xl border border-surface-border bg-black/50 backdrop-blur-xl flex items-center gap-4 hover:border-primary/30 transition-colors">
-                            <div className="p-3 bg-surface rounded-lg">
-                                <PlaySquare className="text-cyan-400 w-6 h-6" />
-                            </div>
-                            <div className="text-left">
-                                <p className="text-sm text-zinc-500 font-medium">Reels Criados</p>
-                                <p className="text-2xl font-bold text-white">8.2K<span className="text-cyan-400">+</span></p>
-                            </div>
-                        </div>
-
-                        <div className="p-4 rounded-2xl border border-surface-border bg-black/50 backdrop-blur-xl flex items-center gap-4 hover:border-primary/30 transition-colors">
-                            <div className="p-3 bg-surface rounded-lg">
-                                <Subtitles className="text-teal-400 w-6 h-6" />
-                            </div>
-                            <div className="text-left">
-                                <p className="text-sm text-zinc-500 font-medium">Legendas com IA</p>
-                                <p className="text-2xl font-bold text-white">45.9K<span className="text-teal-400">+</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        ))}
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

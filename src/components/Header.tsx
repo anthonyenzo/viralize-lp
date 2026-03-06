@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 export function Header() {
     return (
@@ -9,7 +9,7 @@ export function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
                         <div className="p-2 bg-gradient-to-br from-primary to-blue-600 rounded-lg shadow-[0_0_15px_var(--color-primary-glow)]">
-                            <Zap className="text-background fill-current w-6 h-6 group-hover:scale-110 transition-transform" />
+                            <Rocket className="text-background fill-current w-6 h-6 group-hover:scale-110 transition-transform" />
                         </div>
                         <span className="text-2xl font-display font-bold text-white tracking-tight">
                             Viralize <span className="text-primary italic">AI</span>
