@@ -6,29 +6,30 @@ import { motion } from "framer-motion";
 
 const plans = [
     {
-        name: "Free",
-        price: "R$ 0",
+        name: "Básico",
+        price: "R$ 49,90",
         period: "/mês",
-        description: "Para iniciantes dando os primeiros passos.",
+        description: "Ideal para começar a testar o poder da IA.",
         features: [
-            "Acesso a posts de texto",
-            "Frases de efeito geradas por IA",
-            "10 downloads por mês",
+            "Posts para Twitter ilimitados",
+            "Frases de efeito ilimitadas",
+            "5 gerações de Reels por mês",
+            "5 gerações de legendas por mês",
         ],
-        buttonText: "Começar de graça",
+        buttonText: "Assinar Básico",
         buttonPrimary: false,
         popular: false,
     },
     {
         name: "Premium",
-        price: "R$ 49",
+        price: "R$ 147",
         period: "/mês",
         description: "O essencial para crescer sua marca.",
         features: [
-            "Acesso ao Criador de Reels",
-            "Legendas geradas com IA",
+            "30 gerações de Reels por mês",
+            "30 gerações de legendas por mês",
             "Conversores Ilimitados (YT, IG, TTK)",
-            "Downloads sem marca d&apos;água",
+            "Downloads sem marca d'água",
             "Resolução 4K"
         ],
         buttonText: "Assinar Premium",
@@ -37,14 +38,14 @@ const plans = [
     },
     {
         name: "Anual",
-        price: "R$ 39",
+        price: "R$ 107",
         period: "/mês",
         description: "Desconto agressivo para comprometidos.",
         features: [
             "Todos os benefícios Premium",
             "Suporte prioritário",
             "Acesso antecipado a novas IAs",
-            "Economize R$ 120 no ano"
+            "Economize R$ 480 no ano"
         ],
         buttonText: "Assinar Anual",
         buttonPrimary: false,
