@@ -68,14 +68,14 @@ export function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <Link
                             href="/signup"
-                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-background font-bold text-lg hover:bg-cyan-400 hover:shadow-[0_0_30px_var(--color-primary-glow)] transition-all flex items-center justify-center gap-2"
+                            className="w-[85%] max-w-[280px] sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-primary text-background font-bold text-base sm:text-lg hover:bg-cyan-400 hover:shadow-[0_0_30px_var(--color-primary-glow)] transition-all flex items-center justify-center gap-2 mx-auto"
                         >
                             Começar agora
                             <ArrowRight size={20} />
                         </Link>
                         <Link
                             href="#features"
-                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-surface border border-surface-border text-white font-semibold text-lg hover:bg-surface-hover hover:border-zinc-700 transition-all flex items-center justify-center gap-2"
+                            className="w-[85%] max-w-[280px] sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-surface border border-surface-border text-white font-semibold text-base sm:text-lg hover:bg-surface-hover hover:border-zinc-700 transition-all flex items-center justify-center gap-2 mx-auto"
                         >
                             Ver funcionalidades
                         </Link>
