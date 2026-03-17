@@ -112,11 +112,12 @@ export function Hero() {
                                 WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
                             }}
                         >
-                            <div className="w-full h-[320px] overflow-hidden rounded-lg bg-zinc-900 border border-zinc-800">
+                            <div className="relative w-full h-[350px] overflow-hidden rounded-lg bg-[#0A0A0B] border border-zinc-800">
                                 <img 
                                     src="/images/dashboard-preview.png" 
                                     alt="Menu de Ferramentas Viralize AI" 
-                                    className="w-full h-full object-cover object-left-top transform scale-[2.2] origin-top-left shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
+                                    className="absolute top-0 left-0 w-[240%] max-w-none h-auto object-left-top shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
+                                    style={{ transform: 'translate(0, 0)' }}
                                 />
                             </div>
                         </div>
