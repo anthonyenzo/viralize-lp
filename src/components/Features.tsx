@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function Features() {
     return (
-        <section className="py-24 bg-surface border-y border-surface-border relative overflow-hidden">
+        <section id="features" className="pt-12 pb-24 bg-surface border-y border-surface-border relative overflow-hidden">
             {/* Glow effects */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -24,16 +24,16 @@ export function Features() {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
                             <Quote size={16} />
-                            <span className="text-sm font-medium">Post Twitter & Frases</span>
+                            <span className="text-sm font-medium">Post Twitter</span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
                             Posts visuais que retêm a atenção.
                         </h2>
                         <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
-                            Crie posts no formato mais consumido do momento. Adicione sua foto, @usuário, selo de verificado e gere frases de efeito prontas para o feed ou stories usando nossa IA treinada para viralizar.
+                            Crie posts no formato mais consumido do momento. Adicione sua foto, @usuário, selo de verificado e gere frases de efeito prontas para o feed ou stories com estética nativa e aparência de conteúdo real, não de anúncio.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Formatos otimizados para Instagram e TikTok", "Geração de frases por IA", "Marca d&apos;água personalizável"].map((item, i) => (
+                            {["Formatos otimizados para Instagram e TikTok", "Gerações Ilimitadas", "Configurações de Aparência Exclusivas"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>
@@ -78,7 +78,7 @@ export function Features() {
                                             <span className="font-bold text-white text-sm">Seu Nome</span>
                                             <svg className="w-4 h-4 text-primary fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
                                         </div>
-                                        <span className="text-xs text-zinc-500">@seuusario</span>
+                                        <span className="text-xs text-zinc-500">@usuario</span>
                                     </div>
                                 </div>
                                 <p className="text-lg sm:text-xl text-white font-medium text-left leading-relaxed mb-4">
@@ -135,26 +135,46 @@ export function Features() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-tl from-teal-500/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
                         <div className="relative bg-background border border-surface-border rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden group">
-                            {/* Mockup UI - Video Editor */}
-                            <div className="flex items-center justify-between border-b border-surface-border pb-4 mb-4">
-                                <span className="text-sm text-zinc-400 font-medium">Reel Editor AI</span>
-                                <span className="px-2 py-1 bg-teal-500/20 text-teal-400 text-xs rounded-md">Processing 98%</span>
+                            {/* Mockup UI - AI Workflow */}
+                            <div className="flex items-center justify-between border-b border-surface-border pb-4 mb-8">
+                                <span className="text-sm text-zinc-400 font-medium">AI Reels Workflow</span>
+                                <span className="px-2 py-1 bg-teal-500/20 text-teal-400 text-xs rounded-md">Magic Mode</span>
                             </div>
-                            <div className="aspect-[9/16] max-w-[200px] sm:max-w-[240px] mx-auto bg-surface border border-surface-border rounded-2xl relative overflow-hidden flex flex-col justify-end p-4">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop')] bg-cover opacity-20" />
-                                <div className="relative text-center w-full z-10 mb-8">
-                                    <span className="bg-yellow-400 text-black font-bold text-lg sm:text-2xl px-2 py-1 uppercase transform -skew-x-6 inline-block shadow-lg">
-                                        INTELIGÊNCIA
-                                    </span>
-                                    <br />
-                                    <span className="bg-white text-black font-black text-2xl sm:text-3xl px-2 py-0.5 mt-1 uppercase transform -skew-x-6 inline-block shadow-lg">
-                                        ARTIFICIAL
-                                    </span>
+
+                            <div className="space-y-6 relative">
+                                {/* Connection Line */}
+                                <div className="absolute left-[23px] top-6 bottom-6 w-0.5 bg-gradient-to-b from-teal-500/50 via-teal-500/20 to-transparent hidden sm:block" />
+
+                                {/* Step 1 */}
+                                <div className="flex items-center gap-4 relative z-10">
+                                    <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/5">
+                                        <Play className="w-6 h-6 text-teal-400" />
+                                    </div>
+                                    <div className="flex-1 bg-surface/50 border border-surface-border p-3 rounded-xl">
+                                        <div className="text-xs text-teal-400 font-bold mb-1 uppercase tracking-wider">Passo 1</div>
+                                        <div className="text-sm text-white font-medium">Upload do Conteúdo</div>
+                                    </div>
                                 </div>
-                                {/* Timeline mock */}
-                                <div className="relative w-full h-8 bg-background/80 rounded-lg border border-surface-border overflow-hidden backdrop-blur-sm z-10">
-                                    <div className="h-full bg-teal-500/20 w-3/4 border-r border-teal-500 flex items-center px-2">
-                                        <div className="h-4 w-1 bg-teal-500 rounded-full" />
+
+                                {/* Step 2 */}
+                                <div className="flex items-center gap-4 relative z-10">
+                                    <div className="w-12 h-12 rounded-xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/10">
+                                        <Quote className="w-6 h-6 text-teal-400" />
+                                    </div>
+                                    <div className="flex-1 bg-teal-500/5 border border-teal-500/20 p-3 rounded-xl ring-1 ring-teal-500/20">
+                                        <div className="text-xs text-teal-400 font-bold mb-1 uppercase tracking-wider">Passo 2</div>
+                                        <div className="text-sm text-white font-medium">IA Gera Legendas e Cortes</div>
+                                    </div>
+                                </div>
+
+                                {/* Step 3 */}
+                                <div className="flex items-center gap-4 relative z-10 scale-105 transform origin-left">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center shrink-0 shadow-xl shadow-teal-500/20">
+                                        <CheckCircle2 className="w-6 h-6 text-black" />
+                                    </div>
+                                    <div className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 p-3 rounded-xl shadow-lg">
+                                        <div className="text-xs text-teal-100 font-bold mb-1 uppercase tracking-wider">Resultado</div>
+                                        <div className="text-sm text-black font-bold">Vídeo Viral Pronto!</div>
                                     </div>
                                 </div>
                             </div>
@@ -179,10 +199,10 @@ export function Features() {
                             Baixe e reaproveite qualquer conteúdo.
                         </h2>
                         <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
-                            Converta e baixe vídeos do YouTube (MP4/MP3), Reels do Instagram e vídeos do TikTok em alta qualidade e sem marca d&apos;água. Ideal para curadoria de conteúdo e canais dark.
+                            Converta e baixe vídeos do YouTube (MP4/MP3), Reels do Instagram e vídeos do TikTok em alta qualidade e sem marca d&apos;água. O conversor mais rápido e intuitivo.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Downloads em 1080p e 4K", "Extração de MP3 em 320kbps", "Sem marca d&apos;água do TikTok"].map((item, i) => (
+                            {["Downloads em 720p e 1080p", "Extração de MP3 em 320kbps", "Sem marca d'água"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-purple-400 w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>
@@ -204,9 +224,9 @@ export function Features() {
                             <div className="bg-surface rounded-xl p-4 sm:p-6 border border-surface-border">
                                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
                                     <div className="flex-1 h-12 bg-background border border-surface-border rounded-lg flex items-center px-4 overflow-hidden">
-                                        <span className="text-zinc-500 truncate text-sm">https://www.tiktok.com/@creator/video/1234...</span>
+                                        <span className="text-zinc-500 truncate text-sm">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span>
                                     </div>
-                                    <button className="h-12 px-6 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors">
+                                    <button className="h-12 px-6 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
                                         Analisar
                                     </button>
                                 </div>

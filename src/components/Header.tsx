@@ -18,13 +18,17 @@ export function Header() {
 
                     {/* Navigation */}
                     <nav className="hidden lg:flex items-center gap-8">
-                        {["Funcionalidades", "Conversores", "Planos", "FAQ"].map((link) => (
+                        {[
+                            { label: "Funcionalidades", href: "#features" },
+                            { label: "Planos", href: "#pricing" },
+                            { label: "FAQ", href: "#faq" }
+                        ].map((link) => (
                             <Link
-                                key={link}
-                                href={`#${link.toLowerCase()}`}
+                                key={link.label}
+                                href={link.href}
                                 className="text-sm font-medium text-zinc-400 hover:text-primary transition-colors hover:glow-sm"
                             >
-                                {link}
+                                {link.label}
                             </Link>
                         ))}
                     </nav>
