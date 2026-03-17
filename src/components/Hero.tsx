@@ -48,7 +48,7 @@ export function Hero() {
                         </span>
                     </motion.div>
 
-                    <h1 className="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-8 leading-[1.1]">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white tracking-tight mb-8 leading-[1.1]">
                         Crie conteúdo viral em <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-300 to-primary-dark relative inline-block pb-1">
                             segundos
@@ -61,7 +61,7 @@ export function Hero() {
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                         A ferramenta indispensável dos maiores perfis do Brasil para dominar o algoritmo, escalar sua audiência e converter seguidores em clientes fiéis.
                     </p>
 

@@ -16,10 +16,10 @@ export function Features() {
                 {/* Feature 1 */}
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-24 lg:mb-32">
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 text-left"
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
@@ -42,7 +42,7 @@ export function Features() {
                         </ul>
                         <Link
                             href="/signup"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/30 text-primary font-semibold hover:bg-primary hover:text-background transition-all"
+                            className="hidden lg:inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/30 text-primary font-semibold hover:bg-primary hover:text-background transition-all w-fit"
                         >
                             Testar agora
                             <ArrowRight size={18} />
@@ -50,10 +50,10 @@ export function Features() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 w-full relative"
                     >
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
@@ -87,16 +87,23 @@ export function Features() {
                                 <div className="text-left text-primary text-sm font-medium">10:42 PM · 15 Mar 2026</div>
                             </div>
                         </div>
+                        {/* Mobile Button - Post Twitter */}
+                        <div className="mt-8 flex justify-center lg:hidden">
+                            <Link href="/signup" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold text-lg hover:bg-primary hover:text-background transition-all">
+                                Testar agora
+                                <ArrowRight size={20} />
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
 
                 {/* Feature 2 */}
                 <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 mb-24 lg:mb-32">
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 text-left"
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 mb-6">
@@ -119,7 +126,7 @@ export function Features() {
                         </ul>
                         <Link
                             href="/signup"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 font-semibold hover:bg-teal-500 hover:border-teal-500 hover:text-black transition-all"
+                            className="hidden lg:inline-flex items-center gap-2 px-6 py-3 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 font-semibold hover:bg-teal-500 hover:border-teal-500 hover:text-black transition-all w-fit"
                         >
                             Criar Reel agora
                             <ArrowRight size={18} />
@@ -127,10 +134,10 @@ export function Features() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 w-full relative"
                     >
                         <div className="absolute inset-0 bg-gradient-to-tl from-teal-500/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
@@ -179,16 +186,23 @@ export function Features() {
                                 </div>
                             </div>
                         </div>
+                        {/* Mobile Button - Criador de Reels */}
+                        <div className="mt-8 flex justify-center lg:hidden">
+                            <Link href="/signup" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 font-bold text-lg hover:bg-teal-500 hover:border-teal-500 hover:text-black transition-all">
+                                Criar Reel agora
+                                <ArrowRight size={20} />
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
 
                 {/* Feature 3 */}
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 text-left"
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-6">
@@ -209,13 +223,20 @@ export function Features() {
                                 </li>
                             ))}
                         </ul>
+                        <Link
+                            href="/signup"
+                            className="hidden lg:inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-semibold hover:bg-purple-500 hover:border-purple-500 hover:text-white transition-all w-fit"
+                        >
+                            Converter agora
+                            <ArrowRight size={18} />
+                        </Link>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1 w-full relative"
                     >
                         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-3xl blur-2xl transform scale-95" />
@@ -227,7 +248,7 @@ export function Features() {
                                         <span className="text-zinc-500 truncate text-sm">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span>
                                     </div>
                                     <button className="h-12 px-6 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
-                                        Analisar
+                                        Converter
                                     </button>
                                 </div>
 
@@ -249,6 +270,13 @@ export function Features() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        {/* Mobile Button - Conversores */}
+                        <div className="mt-8 flex justify-center lg:hidden">
+                            <Link href="/signup" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-bold text-lg hover:bg-purple-500 hover:border-purple-500 hover:text-white transition-all">
+                                Converter agora
+                                <ArrowRight size={20} />
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
