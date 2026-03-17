@@ -36,22 +36,6 @@
   .clip-path-slant-reverse {
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   }
-
-  .preview-3d-tilt {
-    transform: rotateX(20deg) rotateY(15deg) rotateZ(-2deg) translateY(-10px) scale(1.05);
-    transform-style: preserve-3d;
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  }
-
-  @media (min-width: 768px) {
-    .preview-3d-tilt {
-      transform: rotateX(15deg) translateY(-20px) scale(1.0);
-      transform-style: preserve-3d;
-      mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    }
-  }
 }
 
 @keyframes fade-in {
