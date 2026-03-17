@@ -108,16 +108,15 @@ export function Hero() {
                             style={{ 
                                 transform: 'perspective(1000px) rotateX(15deg) rotateY(10deg) rotateZ(-2deg) translateY(0)',
                                 transformStyle: 'preserve-3d',
-                                maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-                                WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+                                maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
                             }}
                         >
-                            <div className="relative w-full h-[350px] overflow-hidden rounded-lg bg-[#0A0A0B] border border-zinc-800">
+                            <div className="w-full flex justify-center overflow-hidden rounded-lg bg-[#0A0A0B] border border-zinc-800">
                                 <img 
-                                    src="/images/dashboard-preview.png" 
+                                    src="/images/dashboard-mobile-sidebar.png" 
                                     alt="Menu de Ferramentas Viralize AI" 
-                                    className="absolute top-0 left-0 w-[240%] max-w-none h-auto object-left-top shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
-                                    style={{ transform: 'translate(0, 0)' }}
+                                    className="w-full h-auto object-contain shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
                                 />
                             </div>
                         </div>
