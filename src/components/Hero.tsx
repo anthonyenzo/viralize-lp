@@ -104,20 +104,19 @@ export function Hero() {
 
                         {/* Mobile Image (Sidebar Focus with 3D Diagonal) */}
                         <div 
-                            className="block md:hidden relative z-10 w-[110%] -ml-[5%] rounded-2xl border border-zinc-700/50 bg-surface/80 p-1.5 shadow-2xl transition-transform duration-700 origin-center"
+                            className="block md:hidden relative z-10 w-[95%] mx-auto rounded-xl border border-zinc-700/50 bg-surface/50 p-1.5 shadow-2xl transition-transform duration-700"
                             style={{ 
-                                transform: 'perspective(1200px) rotateX(20deg) rotateY(12deg) rotateZ(-4deg) translateY(0px) scale(1.02)',
+                                transform: 'perspective(1000px) rotateX(15deg) rotateY(10deg) rotateZ(-2deg) translateY(0)',
                                 transformStyle: 'preserve-3d',
-                                maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
-                                WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)'
+                                maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
                             }}
                         >
-                            <div className="relative w-full aspect-[4/5] overflow-hidden rounded-xl shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)] bg-[#0A0A0B]">
+                            <div className="w-full h-[320px] overflow-hidden rounded-lg bg-zinc-900 border border-zinc-800">
                                 <img 
                                     src="/images/dashboard-preview.png" 
                                     alt="Menu de Ferramentas Viralize AI" 
-                                    className="absolute top-0 left-0 w-[250%] sm:w-[180%] max-w-none h-auto object-left-top"
-                                    style={{ objectPosition: '0 0' }}
+                                    className="w-full h-full object-cover object-left-top transform scale-[2.2] origin-top-left shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
                                 />
                             </div>
                         </div>
