@@ -29,8 +29,8 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-surface-border flex justify-center items-center">
-                    <p className="text-zinc-600 text-[10px] uppercase tracking-tighter hover:text-primary transition-colors cursor-default">
-                        Feito com inteligência e focado em escala.
+                    <p className="text-zinc-500 text-xs text-center cursor-default">
+                        © 2026 Viralize AI. Todos os direitos reservados.
                     </p>
                 </div>
             </div>
