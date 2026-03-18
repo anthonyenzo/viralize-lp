@@ -29,7 +29,7 @@ jobs:
         npm run build
         echo "{\"version\": \"$(date +%s)\"}" > out/version.json
 
-    - name: 🚀 Enviando para a Hostinger
+    - name: 🚀 Enviando para a Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
@@ -37,7 +37,11 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
         server-dir: /
-        timeout: 600000
+        port: 21
+        timeout: 1200000 # Increased to 20 minutes to prevent disconnects
+        state-name: .ftp-deploy-sync-state.json # Use state tracking so it doesn't try uploading unchanged files
+        dry-run: false
+        dangerous-clean-slate: false
         exclude: |
           **/.git*
           **/.git*/**
