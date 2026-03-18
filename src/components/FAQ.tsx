@@ -53,7 +53,7 @@ const itemVariants = {
 };
 
 export function FAQ() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <section id="faq" className="py-24 bg-surface border-t border-surface-border">
