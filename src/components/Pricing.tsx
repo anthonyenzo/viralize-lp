@@ -29,7 +29,7 @@ const plans = [
             "Todos os benefícios do Plano Básico",
             "30 gerações de Reels com IA por mês",
             "30 gerações de Legendas com IA por mês",
-            "Conversores Ilimitados (YouTube, Instagram, TikTok)",
+            "Conversores ilimitados (YouTube, Instagram, TikTok)",
             "Downloads em FULL HD e sem marca d'água"
         ],
         buttonText: "Assinar Premium",
