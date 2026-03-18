@@ -37,10 +37,10 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
         server-dir: /
-        port: 21
-        timeout: 1200000 # Increased to 20 minutes to prevent disconnects
-        state-name: .ftp-deploy-sync-state.json # Use state tracking so it doesn't try uploading unchanged files
-        dry-run: false
+        protocol: ftp
+        security: loose
+        timeout: 1200000
+        state-name: .ftp-deploy-sync-state.json
         dangerous-clean-slate: false
         exclude: |
           **/.git*
