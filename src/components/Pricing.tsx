@@ -11,10 +11,10 @@ const plans = [
         period: "/mês",
         description: "Ideal para começar a testar o poder da IA.",
         features: [
-            "Posts para Twitter ilimitados",
-            "Frases de efeito ilimitadas",
-            "5 gerações de Reels por mês",
-            "5 gerações de legendas por mês",
+            "Posts Tweet ilimitados",
+            "Frases de Efeito ilimitadas",
+            "5 gerações de Reels com IA grátis por mês",
+            "5 gerações de Legendas com IA grátis por mês",
         ],
         buttonText: "Assinar Básico",
         buttonPrimary: false,
@@ -26,11 +26,11 @@ const plans = [
         period: "/mês",
         description: "O essencial para crescer sua marca.",
         features: [
-            "30 gerações de Reels por mês",
-            "30 gerações de legendas por mês",
-            "Conversores Ilimitados (YT, IG, TTK)",
-            "Downloads sem marca d'água",
-            "Resolução 4K"
+            "Todos os benefícios do Plano Básico",
+            "30 gerações de Reels com IA por mês",
+            "30 gerações de Legendas com IA por mês",
+            "Conversores Ilimitados (YouTube, Instagram, TikTok)",
+            "Downloads em FULL HD e sem marca d'água"
         ],
         buttonText: "Assinar Premium",
         buttonPrimary: true,
@@ -90,7 +90,7 @@ export function Pricing() {
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-                        Comece gratuitamente e evolua com sua <span className="text-primary">audiência.</span>
+                        Comece agora e evolua com sua <span className="text-primary">audiência.</span>
                     </h2>
                     <p className="text-lg text-zinc-400">
                         Cancele quando quiser. Sem taxas ocultas.

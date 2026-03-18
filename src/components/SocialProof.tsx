@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 
 const testimonials = [
-    { name: "@pedrotech", role: "Criador Tech", text: "Minha retenção dobrou desde que comecei a usar as legendas dinâmicas da IA." },
+    { name: "@30sertanejo", role: "Página", text: "Minha retenção e engajamento dobraram desde que comecei a combinar as ferramentas da Viralize." },
     { name: "@marketingmaria", role: "Estrategista", text: "Os posts em formato de frase geraram 3x mais compartilhamentos que meu conteúdo antigo." },
-    { name: "@joaofinancas", role: "Educador", text: "Cortar vídeos e adicionar legendas levava horas. Agora leva literally segundos." },
+    { name: "@joaofinancas", role: "Educador", text: "Cortar vídeos e adicionar legendas levava horas. Agora levo literalmente segundos." },
     { name: "@camilalifestyle", role: "Influenciadora", text: "Baixar vídeos do TikTok sem marca d'água para repostar no Reels mudou meu jogo." },
-    { name: "@tiagodesign", role: "Designer", text: "A qualidade premium dos posts gerados no Twitter style é absurda. Mantenho a cara da minha marca." },
+    { name: "@tiagodesign", role: "Designer", text: "A qualidade premium dos posts gerados no estilo Twitter é absurda. Mantenho a cara da minha marca." },
 ];
 
 const containerVariants = {

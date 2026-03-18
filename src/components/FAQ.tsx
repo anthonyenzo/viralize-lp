@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "O que é o Viralize AI?",
-        answer: "O Viralize AI é uma plataforma all-in-one para criadores de conteúdo. Usamos Inteligência Artificial avançada para gerar posts visuais, criar legendas magnéticas, editar Reels automaticamente e converter vídeos do YouTube, Instagram e TikTok, resolvendo todo o fluxo de criação em uma única ferramenta."
+        question: "O que é o Viralize AI Machine?",
+        answer: "É a plataforma all-in-one para criadores de conteúdo. Com o Viralize AI Machine, você cria em minutos os posts que mais engajam e atraem seguidores, utilizando os mesmos formatos que os maiores players do mercado usam para crescer suas audiências. Além disso, você pode converter vídeos do YouTube, Instagram e TikTok, resolvendo todo o fluxo de criação em uma única ferramenta. Chega de perder tempo com ferramentas complicadas, aqui você foca na sua mensagem e nós cuidamos do resto."
     },
     {
         question: "Preciso saber editar vídeos ou imagens?",
@@ -15,11 +15,19 @@ const faqs = [
     },
     {
         question: "Quais redes sociais a plataforma atende?",
-        answer: "Atualmente, o Viralize AI é perfeitamente otimizado para os formatos do Instagram (Reels e Posts), TikTok (Vídeos curtos) e YouTube (Shorts, além de nossa ferramenta de conversão e extração de áudio)."
+        answer: "Atualmente, o Viralize AI Machine é perfeitamente otimizado para os formatos do Instagram (Reels e Posts), TikTok (Vídeos curtos) e YouTube (Shorts), além da nossa ferramenta de conversão e extração de áudio."
+    },
+    {
+        question: "Posso usar o Viralize AI Machine mesmo sendo iniciante?",
+        answer: "Sim, a plataforma foi feita para você! Se você está começando, o Viralize AI Machine é o seu atalho para criar um perfil profissional e atraente desde o primeiro dia. Nossa interface é tão simples e intuitiva que em poucos cliques você estará produzindo conteúdos que antes levariam horas."
     },
     {
         question: "Os vídeos baixados nos conversores vêm com marca d'água?",
-        answer: "Não. Todos os downloads através dos nossos conversores premium (seja do TikTok, Instagram ou YouTube) são 100% limpos e SEM marca d&apos;água, prontos para você reaproveitar e repostar."
+        answer: "Não. Todos os downloads através dos nossos conversores premium (seja do TikTok, Instagram ou YouTube) são 100% limpos e SEM marca d'água, prontos para você reaproveitar e repostar."
+    },
+    {
+        question: "O conteúdo gerado é exclusivo?",
+        answer: "Sim, todo conteúdo que você cria é 100% seu e autoral. A plataforma é uma ferramenta para dar vida às suas ideias, e o resultado final pertence inteiramente a você. Use como quiser, em todas as suas redes, sem nenhuma restrição. Sua criatividade é o único limite, e o conteúdo gerado é seu para sempre."
     }
 ];
 

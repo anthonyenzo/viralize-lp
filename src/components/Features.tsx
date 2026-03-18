@@ -33,7 +33,7 @@ export function Features() {
                             Crie posts no formato mais consumido do momento. Adicione sua foto, @usuário, selo de verificado e gere frases de efeito prontas para o feed ou stories com estética nativa e aparência de conteúdo real, não de anúncio.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Formatos otimizados para Instagram e TikTok", "Gerações Ilimitadas", "Configurações de Aparência Exclusivas"].map((item, i) => (
+                            {["Formatos otimizados para Instagram e TikTok", "Gerações ilimitadas", "Configurações de aparência exclusivas"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>
@@ -114,10 +114,10 @@ export function Features() {
                             Deixe a IA criar seus vídeos.
                         </h2>
                         <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
-                            Faça upload do seu vídeo e deixe nossa Inteligência Artificial analisar o contexto para gerar legendas magnéticas, cortar silêncios e montar seu Reel automaticamente.
+                            Faça upload do seu vídeo e deixe nossa Inteligência Artificial analisar o contexto para gerar legendas magnéticas e montar seu Reel automaticamente.
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {["Transcrição ultra precisa em PT-BR", "Identificação de palavras-chave", "Animações dinâmicas de texto"].map((item, i) => (
+                            {["Vídeos com a sua identidade visual", "Identificação de palavras-chave e contexto", "Baixe em alta qualidade"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-300">
                                     <CheckCircle2 className="text-teal-400 w-5 h-5 flex-shrink-0" />
                                     <span>{item}</span>
