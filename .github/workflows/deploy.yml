@@ -36,7 +36,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
-        server-dir: /
+        server-dir: ./
         protocol: ftp
         security: loose
         timeout: 1200000
