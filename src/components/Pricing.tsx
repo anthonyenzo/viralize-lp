@@ -128,7 +128,7 @@ export function Pricing() {
                             </div>
 
                             <Link
-                                href="/signup"
+                                href="https://app.viralizeaimachine.com/registrar"
                                 className={`w-full py-3 px-6 rounded-full font-bold flex justify-center items-center transition-all mb-8 ${plan.buttonPrimary
                                     ? "bg-primary text-background hover:bg-cyan-400 hover:shadow-[0_0_20px_var(--color-primary-glow)]"
                                     : "bg-surface-hover border border-surface-border text-white hover:bg-zinc-800"

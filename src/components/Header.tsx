@@ -35,11 +35,11 @@ export function Header() {
 
                     {/* Actions */}
                     <div className="flex items-center gap-3 sm:gap-6">
-                        <Link href="/login" className="hidden sm:block text-sm font-semibold text-zinc-300 hover:text-white transition-colors">
+                        <Link href="https://app.viralizeaimachine.com/login" className="hidden sm:block text-sm font-semibold text-zinc-300 hover:text-white transition-colors">
                             Fazer login
                         </Link>
                         <Link
-                            href="/signup"
+                            href="https://app.viralizeaimachine.com/registrar"
                             className="bg-gradient-to-r from-primary to-blue-600 text-background px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-[0_0_20px_var(--color-primary-glow)] hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
                         >
                             <span className="hidden sm:inline">Criar meu Primeiro Viral</span>

@@ -67,7 +67,7 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <Link
-                            href="/signup"
+                            href="https://app.viralizeaimachine.com/registrar"
                             className="w-[85%] max-w-[280px] sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-primary text-background font-bold text-base sm:text-lg hover:bg-cyan-400 hover:shadow-[0_0_30px_var(--color-primary-glow)] transition-all flex items-center justify-center gap-2 mx-auto"
                         >
                             Começar agora
