@@ -26,22 +26,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (window.location.hostname === 'viralizeaimachine.com') {
-                  var path = window.location.pathname;
-                  if (path === '/login' || path === '/registrar' || path === '/painel') {
-                    window.location.href = 'https://app.viralizeaimachine.com' + path + window.location.search;
-                  }
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased bg-background text-white selection:bg-primary/30 selection:text-primary`}
       >
