@@ -36,10 +36,9 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
-        server-dir: public_html
+        server-dir: public_html/
         protocol: ftp
         security: loose
-        force-pasv: true
         log-level: verbose
         timeout: 2400000
         state-name: .ftp-deploy-sync-state.json
