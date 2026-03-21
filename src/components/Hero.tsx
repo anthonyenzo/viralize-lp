@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, MessageSquareQuote, PlaySquare, Subtitles } from "lucide-react";
 import { motion } from "framer-motion";
 import { ParticleBackground } from "./ParticleBackground";
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -34,11 +35,12 @@ export function Hero() {
                     >
                         <div className="flex -space-x-3">
                             {[1, 2, 3].map((i) => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-background overflow-hidden">
-                                    <img
+                                <div key={i} className="w-10 h-10 rounded-full border-2 border-background overflow-hidden relative">
+                                    <Image
                                         src={`/images/avatars/avatar_${i}.png`}
                                         alt={`Usuário ${i}`}
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                             ))}
@@ -95,9 +97,12 @@ export function Hero() {
                         <div 
                             className="hidden md:block relative z-10 w-full rounded-xl sm:rounded-2xl border border-zinc-700/50 bg-surface/50 p-1 sm:p-2 shadow-2xl preview-3d-tilt transition-all duration-700 hover:!transform-none"
                         >
-                            <img 
+                            <Image 
                                 src="/images/dashboard-preview.png" 
                                 alt="Dashboard do App Viralize AI" 
+                                width={1200}
+                                height={800}
+                                priority
                                 className="w-full h-auto rounded-lg sm:rounded-xl object-cover shadow-[0_0_50px_-12px_rgba(0,242,255,0.3)] transition-all duration-700"
                             />
                         </div>
@@ -112,11 +117,12 @@ export function Hero() {
                                 WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
                             }}
                         >
-                            <div className="w-full flex justify-center overflow-hidden rounded-lg bg-[#0A0A0B] border border-zinc-800">
-                                <img 
+                            <div className="w-full flex justify-center overflow-hidden rounded-lg bg-[#0A0A0B] border border-zinc-800 relative aspect-[9/16]">
+                                <Image 
                                     src="/images/dashboard-mobile-sidebar.png" 
                                     alt="Menu de Ferramentas Viralize AI" 
-                                    className="w-full h-auto object-contain shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
+                                    fill
+                                    className="object-contain shadow-[0_0_30px_-5px_rgba(0,242,255,0.2)]"
                                 />
                             </div>
                         </div>

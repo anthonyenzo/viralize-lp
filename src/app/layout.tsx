@@ -17,6 +17,33 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Viralize AI | Crie Conteúdo Viral em Segundos",
   description: "A plataforma all-in-one para criadores de conteúdo digital. Posts visuais, Reels automatizados e downloads sem marca d'água.",
+  keywords: ["marketing digital", "automação", "reels", "shorts", "tiktok", "inteligência artificial", "viralize"],
+  authors: [{ name: "Anthony Enzo" }],
+  openGraph: {
+    title: "Viralize AI | Crie Conteúdo Viral em Segundos",
+    description: "Domine as redes sociais com automações e IA de ponta.",
+    url: "https://viralizeaimachine.com",
+    siteName: "Viralize AI",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Viralize AI Machine",
+      },
+    ],
+    locale: "pt-BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Viralize AI | Crie Conteúdo Viral em Segundos",
+    description: "Domine as redes sociais com automações e IA de ponta.",
+    images: ["/images/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
