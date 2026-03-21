@@ -41,8 +41,8 @@ jobs:
         security: loose
         log-level: verbose
         timeout: 2400000
-        state-name: .ftp-deploy-sync-state.json
-        dangerous-clean-slate: false
+        state-name: .ftp-deploy-sync-state-v3.json
+        dangerous-clean-slate: true
         exclude: |
           **/.git*
           **/.git*/**
