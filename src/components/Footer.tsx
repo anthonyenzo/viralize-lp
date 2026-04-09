@@ -20,7 +20,9 @@ export function Footer() {
 
                     <div className="flex gap-4">
                         <Link
-                            href="#"
+                            href="https://instagram.com/viralizeai.machine"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="w-10 h-10 rounded-full bg-surface border border-surface-border flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-all"
                         >
                             <Instagram size={18} />
