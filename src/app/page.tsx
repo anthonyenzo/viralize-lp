@@ -4,6 +4,7 @@ import { Features } from "@/components/Features";
 import { SocialProof } from "@/components/SocialProof";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
+import { ContactCTA } from "@/components/ContactCTA";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SocialProof />
       <Pricing />
       <FAQ />
+      <ContactCTA />
     </>
   );
 }
