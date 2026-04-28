@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const testimonials = [
-    { name: "@30sertanejo", role: "Página", text: "Minha retenção e engajamento dobraram desde que comecei a combinar as ferramentas da Viralize." },
+    { name: "@30sertanejo", role: "Página", text: "O Clonador de Carrossel é bizarro! Economizo horas de design e o engajamento dos meus posts estilo Twitter no Instagram disparou." },
     { name: "@marketingmaria", role: "Estrategista", text: "Os posts em formato de frase geraram 3x mais compartilhamentos que meu conteúdo antigo." },
     { name: "@joaofinancas", role: "Educador", text: "Cortar vídeos e adicionar legendas levava horas. Agora levo literalmente segundos." },
     { name: "@camilalifestyle", role: "Influenciadora", text: "Baixar vídeos do TikTok sem marca d'água para repostar no Reels mudou meu jogo." },

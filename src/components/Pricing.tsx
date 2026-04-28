@@ -12,6 +12,7 @@ const plans = [
         description: "Ideal para começar a testar o poder da IA.",
         features: [
             "Posts Tweet ilimitados",
+            "Clonador de Carrossel ilimitado",
             "Frases de Efeito ilimitadas",
             "5 gerações de Reels com IA grátis por mês",
             "5 gerações de Legendas com IA grátis por mês",

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const benefits = [
     {
         title: "Criação Visual",
-        description: "Posts estilo Twitter e Frases de Efeito prontas para engajar no formato que as redes mais amam.",
+        description: "Posts estilo Twitter, Clonador de Carrossel e Frases de Efeito prontas para engajar no formato que as redes mais amam.",
         icon: Type,
         color: "text-blue-400"
     },
